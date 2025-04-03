@@ -17,7 +17,7 @@ type IPostProps = {
   title: string;
   description: string;
   date: string;
-  modified_date: string;
+  modifiedDate: string;
   image: string;
   content: string;
 };
@@ -31,7 +31,7 @@ const DisplayPost = (props: IPostProps) => (
         post={{
           image: props.image,
           date: props.date,
-          modified_date: props.modified_date,
+          modifiedDate: props.modifiedDate,
         }}
       />
     }
@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
     'title',
     'description',
     'date',
-    'modified_date',
+    'modifiedDate',
     'image',
     'content',
     'slug',
@@ -84,7 +84,7 @@ export const getStaticProps: GetStaticProps<IPostProps, IPostUrl> = async ({
       title: post.title,
       description: post.description,
       date: post.date,
-      modified_date: post.modified_date,
+      modifiedDate: post.modifiedDate,
       image: post.image,
       content,
     },

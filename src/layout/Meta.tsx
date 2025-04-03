@@ -13,7 +13,7 @@ type IMetaProps = {
   post?: {
     image: string;
     date: string;
-    modified_date: string;
+    modifiedDate: string;
   };
 };
 
@@ -102,7 +102,7 @@ const Meta = (props: IMetaProps) => {
             />
             <meta
               property="article:modified_time"
-              content={new Date(props.post.modified_date).toISOString()}
+              content={new Date(props.post.modifiedDate).toISOString()}
               key="article:modified_time"
             />
             <script
@@ -136,7 +136,7 @@ const Meta = (props: IMetaProps) => {
             "image": ["${AppConfig.url}${router.basePath}${props.post.image}"],
             "datePublished": "${new Date(props.post.date).toISOString()}",
             "dateModified": "${new Date(
-              props.post.modified_date
+              props.post.modifiedDate
             ).toISOString()}",
             "mainEntityOfPage": {
               "@type": "WebPage",
