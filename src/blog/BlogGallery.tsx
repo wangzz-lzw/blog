@@ -15,26 +15,26 @@ export type IBlogGalleryProps = {
 };
 
 const BlogGallery = (props: IBlogGalleryProps) => (
-  <div className="grid gap-6 sm:grid-cols-3 lg:grid-cols-5">
+  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4 bg-gray-50">
     {props.posts.map((elt) => (
       <div
         key={elt.slug}
-        className="rounded-lg border border-gray-200 p-4 shadow-md hover:shadow-lg transition-shadow"
+        className="rounded-lg border border-gray-300 p-4 shadow-sm hover:shadow-md transition-shadow bg-white"
       >
         <Link href="/posts/[slug]" as={`/posts/${elt.slug}`}>
           <a>
-            <h2 className="text-lg font-bold text-blue-600 hover:underline">
+            <h2 className="text-base font-medium text-gray-800 hover:text-blue-500 hover:underline">
               {elt.title}
             </h2>
           </a>
         </Link>
-        <p className="mt-2 text-sm text-gray-500">
+        <p className="mt-1 text-xs text-gray-400">
           {dayjs(new Date(elt.date)).format('YYYY-MM-DD')}
         </p>
       </div>
     ))}
 
-    <div className="col-span-full mt-6">
+    <div className="col-span-full mt-4">
       <Pagination {...props.pagination} />
     </div>
   </div>
