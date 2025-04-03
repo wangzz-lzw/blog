@@ -23,6 +23,11 @@ const Main = (props: IMainProps) => (
               <a className="text-gray-600 hover:text-gray-900">介绍</a>
             </Link>
           </li>
+          <li>
+            <Link href="/backend/blog" passHref>
+              <a className="text-gray-600 hover:text-gray-900">后台</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
